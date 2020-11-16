@@ -1,0 +1,17 @@
+</ul><div class="pagination"><ul class="page-numbers">
+ {% if page.has_next %}
+     <li><a class="next page-numbers" href="?page={{page.next_page_number}}">التالي</a></li>
+
+    {% else %}
+     <li><a class="next page-numbers" href="#">التالي</a></li>
+
+    {% endif %}
+
+    <li><span class="page-numbers dots">صفحة {{page.number}} من {{page.paginator.num_pages}}</span></li>
+
+    {% if page.has_previous %}
+    <li><a class="next page-numbers" href="?page={{page.previous_page_number}}">السابق</a></li>
+    {% else %}
+    <li><a class="next page-numbers" href="#">السابق</a></li>
+    {% endif %}
+</ul>
